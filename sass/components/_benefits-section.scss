@@ -4,12 +4,21 @@
 }
 
 .benefits-list {
-  @include centered(flex, space-between, center);
+  width: 100%;
+  @media screen and (min-width: 768px) {
+    @include centered(flex, space-between, center);
+  }
+  @media screen and (min-width: 768px) and (max-width: 1200px) {
+    flex-wrap: wrap;
+  }
 }
 
 .benefits-list__item {
   flex-basis: 270px;
-  margin-left: 30px;
+  margin-bottom: 30px;
+  @media screen and (min-width: 1200px) {
+    margin-left: 30px;
+  }
 
   &:first-child {
     margin-left: 0;
@@ -18,11 +27,20 @@
   &::before {
     @include centered(block, inherit, inherit);
     content: '';
+    width: 450px;
+    @media screen and (min-width: 768px) {
+      width: 354px;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 270px;
+    }
     height: 120px;
-    background-size: contain;
+    background-color: $portfolio-buttons-color;
+    background-size: 70px;
     background-repeat: no-repeat;
     background-position: center;
     margin-bottom: 30px;
+    border-radius: 4px;
   }
 
   @each $group in 1, 2, 3, 4 {
@@ -36,7 +54,10 @@
   @extend %boldSubtitle;
   font-size: 14px;
   text-transform: uppercase;
-  text-align: left;
+  text-align: center;
+  @media screen and (min-width: 768px) {
+    text-align: left;
+  }
   margin-bottom: 10px;
 }
 .benefits-list__description {

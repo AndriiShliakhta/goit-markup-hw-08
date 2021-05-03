@@ -1,4 +1,11 @@
 /* Услуги компании */
+
+.services-section {
+  @include centered(none, inherit, inherit);
+  @media screen and (min-width: 1200px) {
+    @include centered(block, inherit, inherit);
+  }
+}
 .services-list {
   @include centered(flex, space-between, center);
 }

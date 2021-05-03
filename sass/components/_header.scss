@@ -1,12 +1,20 @@
 /* Хедер */
 
-.navigation-container,
-.contacts-list {
+.navigation-container {
   @include centered(flex, space-between, center);
+}
+
+.contacts-list,
+.navigation-list {
+  @include centered(none, inherit, inherit);
+  @media screen and (min-width: 768px) {
+    @include centered(flex, space-between, center);
+  }
 }
 
 .header {
   border-bottom: 1px solid #ececec;
+  @include centered(flex, center, inherit);
 }
 .header > .container {
   @include centered(flex, space-between, center);
@@ -14,7 +22,6 @@
 }
 
 .navigation-list {
-  @include centered(flex, space-between, center);
   margin-left: 93px;
 }
 
