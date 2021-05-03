@@ -1,0 +1,148 @@
+/* Модальное окно */
+.backdrop {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 750ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.is-hidden {
+  visibility: hidden;
+  pointer-events: none;
+  opacity: 0;
+}
+.modal {
+  width: 528px;
+  background-color: #ffffff;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px;
+}
+.modal__title {
+  font-size: 20px;
+  line-height: 1.17;
+  margin-bottom: 12px;
+}
+
+.modal-form__label {
+  @include centered(block, inherit, inherit);
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.modal-form__input {
+  @include centered(block, inherit, inherit);
+  width: 100%;
+  padding: 11px 41px;
+  border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  cursor: pointer;
+  transition: outline-color var(--transition-function);
+  font-size: 12px;
+  line-height: 1.17;
+
+  &:focus {
+    outline-color: $accent-color;
+  }
+}
+
+.modal-form__icon {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  z-index: 20;
+  top: 35px;
+  left: 12px;
+  transition: fill var(--transition-function);
+
+  .modal-form__label:focus-within & {
+    fill: $accent-color;
+  }
+}
+
+.modal-form__input.modal-form__comment {
+  height: 120px;
+  padding-left: 16px;
+  resize: none;
+}
+
+.modal-form__checkbox-label {
+  @include centered(flex, inherit, center);
+  font-size: 14px;
+  line-height: 1.71;
+  margin: 10px 0 30px 14px;
+}
+.modal-form__checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+  cursor: pointer;
+}
+.modal-form__checkbox-icon {
+  width: 16px;
+  height: 15px;
+  border: 2px solid $section-title-color;
+  border-radius: 2px;
+  margin-right: 7px;
+  transition: border-color var(--transition-function),
+    background-color var(--transition-function),
+    background-image var(--transition-function);
+
+  .modal-form__checkbox:checked + & {
+    background-color: $accent-color;
+    border-color: $accent-color;
+    background-image: url('../images/icon-check.svg');
+    background-size: contain;
+    background-origin: border-box;
+  }
+}
+.modal-form__checkbox-link,
+.modal-form__checkbox-link:visited {
+  color: $accent-color;
+}
+
+.modal-form__button {
+  @include centered(block, inherit, inherit);
+  padding: 10px 55px;
+  width: 200px;
+  margin: auto;
+  background-color: $accent-color;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  color: $white-color;
+  border: none;
+  font-size: 16px;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+  line-height: 1.875;
+  cursor: pointer;
+}
+
+.modal .button-close {
+  @include centered(flex, center, center);
+  text-align: right;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+}
+.button-close__icon {
+  width: 18px;
+  height: 18px;
+  transition: fill var(--transition-function);
+
+  .button-close:hover & {
+    fill: $accent-color;
+  }
+}

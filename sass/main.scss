@@ -1,0 +1,22 @@
+// Шрифти
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap');
+
+// Утилиты
+@import './utils/veriables';
+
+// Компоненты
+@import './components/common';
+@import './components/header';
+@import './components/logo';
+@import './components/hero-section';
+@import './components/benefits-section';
+@import './components/services-section';
+@import './components/team-section';
+@import './components/social-list';
+@import './components/clients-section';
+@import './components/footer';
+
+@import './components/modal';
+
+@import './components/portfolio';
+@import './components/portfolio-projects';

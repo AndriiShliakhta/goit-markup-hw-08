@@ -1,0 +1,35 @@
+// Переменные
+
+// Цветовая палитра
+$accent-color: #2196f3;
+$primery-text-color: #757575;
+$section-title-color: #212121;
+$white-color: #ffffff;
+$black-color: #000000;
+$logos-buttons-shadow: rgba(0, 0, 0, 0.25);
+$footer-address-contacts-color: rgba(255, 255, 255, 0.6);
+$portfolio-buttons-color: #f5f4fa;
+$footer-bgc: #2f303a;
+$card-border-color: #eeeeee;
+
+// Шрифты
+$roboto: 'Roboto', 'Arial', sans-serif;
+$raleway: 'Raleway', 'Roboto', 'Arial', sans-serif;
+
+// css переменные
+:root {
+  --transition-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+// Миксин центрирования
+@mixin centered($type, $horizontal, $vertical) {
+  display: $type;
+  justify-content: $horizontal;
+  align-items: $vertical;
+}
+
+// Шаблон для subtitle
+%boldSubtitle {
+  font-weight: 700;
+  line-height: 1.17;
+}

@@ -1,0 +1,17 @@
+.logo {
+  @extend %boldSubtitle;
+  font-family: $raleway;
+  font-size: 26px;
+  text-decoration: none;
+
+  &--blue-part {
+    color: $accent-color;
+  }
+
+  .header & {
+    color: $black-color;
+  }
+  .footer & {
+    color: $white-color;
+  }
+}

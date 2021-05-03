@@ -1,0 +1,23 @@
+/* Постоянные клиенты */
+.clients-list {
+  @include centered(flex, inherit, center);
+}
+
+.clients-list__item + .clients-list__item {
+  margin-left: 30px;
+}
+
+.clients-list__icon {
+  width: 170px;
+  height: 92px;
+  @include centered(block, inherit, inherit);
+  fill: #afb1b8;
+  border: 2px solid #afb1b8;
+  border-radius: 4px;
+  transition: fill var(--transition-function), border var(--transition-function);
+
+  &:hover {
+    fill: $accent-color;
+    border: 2px solid $accent-color;
+  }
+}
