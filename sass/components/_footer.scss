@@ -8,8 +8,18 @@
   @media screen and (min-width: 768px) {
     @include centered(flex, space-between, inherit);
   }
+  @media screen and (min-width: 768px) and (max-width: 1200px) {
+    flex-wrap: wrap;
+    @include centered(flex, space-around, inherit);
+  }
 }
-
+.logo-address-container,
+.social-container {
+  @media screen and(max-width:1200px) {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+}
 .footer-address {
   font-style: normal;
   font-weight: 400;
@@ -23,7 +33,9 @@
 }
 
 .social-container {
-  margin-left: 70px;
+  @media screen and(min-width:1200px) {
+    margin-left: 70px;
+  }
   color: $white-color;
   @extend %boldSubtitle;
   text-transform: uppercase;
@@ -33,7 +45,12 @@
 }
 
 .subscribe-container {
-  margin-left: 93px;
+  @media screen and(max-width:1200px) {
+    text-align: center;
+  }
+  @media screen and(min-width:1200px) {
+    margin-left: 93px;
+  }
 }
 .subscribe-container__label {
   @include centered(block, inherit, inherit);
@@ -44,8 +61,14 @@
   text-transform: uppercase;
 }
 .subscribe-container__form {
-  display: inline-block;
-  width: 358px;
+  width: 450px;
+  margin-bottom: 20px;
+  display: block;
+  @media screen and(min-width: 1200px) {
+    width: 358px;
+    margin-bottom: 0;
+    display: inline-block;
+  }
   padding: 15px 16px;
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
