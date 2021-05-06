@@ -6,7 +6,7 @@
 .benefits-list {
   width: 100%;
   @media screen and (min-width: 768px) {
-    @include centered(flex, space-between, center);
+    @include centered(flex, space-between, stretch);
   }
   @media screen and (min-width: 768px) and (max-width: 1200px) {
     flex-wrap: wrap;
@@ -14,7 +14,9 @@
 }
 
 .benefits-list__item {
-  flex-basis: 270px;
+  @media screen and (min-width: 768px) {
+    width: 354px;
+  }
   margin-bottom: 30px;
   @media screen and (min-width: 1200px) {
     margin-left: 30px;

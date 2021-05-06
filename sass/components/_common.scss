@@ -24,10 +24,9 @@ ul {
 }
 
 .section {
-  padding: 15px 0;
+  padding: 60px 0;
   @media screen and (min-width: 768px) {
     @include centered(flex, center, inherit);
-    padding: 15px 0;
   }
   @media screen and (min-width: 1200px) {
     padding: 94px 0;
@@ -51,11 +50,13 @@ ul {
 }
 
 .container {
-  width: 480px;
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
   padding: 0 15px;
   margin: auto;
   @media screen and (min-width: 768px) {
-    width: 738px;
+    width: 768px;
   }
   @media screen and (min-width: 1200px) {
     width: 1200px;

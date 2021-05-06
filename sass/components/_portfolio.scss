@@ -8,8 +8,18 @@
 }
 
 .portfolio-btn-list {
-  margin-bottom: 50px;
-  padding: 6px 22px;
+  @include centered(flex, flex-start, inherit);
+  flex-wrap: wrap;
+  padding-bottom: 40px;
+  @media screen and(min-width: 768px) {
+    @include centered(flex, center, inherit);
+    padding-bottom: 30px;
+  }
+  @media screen and(min-width: 1200px) {
+    @include centered(flex, center, inherit);
+    padding-bottom: 50px;
+    // padding: 6px 22px;
+  }
 }
 
 .portfolio-btn-list__button {
@@ -31,14 +41,16 @@
   }
 }
 
-.portfolio-btn-list {
-  @include centered(flex, center, inherit);
-}
-
 .portfolio-btn-list__item {
-  margin-left: 8px;
+  margin-right: 8px;
 
-  &:first-child {
-    margin-left: 0;
+  &:last-child {
+    margin-right: 0;
+  }
+  @media screen and(max-width: 767px) {
+    &:nth-child(4),
+    &:nth-child(5) {
+      margin-top: 15px;
+    }
   }
 }
