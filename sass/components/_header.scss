@@ -160,7 +160,7 @@
   transition: color var(--transition-function);
   @media screen and(max-width:767px) {
     font-size: 40px;
-    letter-spacing: 0.02;
+    letter-spacing: 0.02em;
   }
   @media screen and(min-width:768px) {
     &::after {
@@ -236,7 +236,7 @@
   border-right: 1px solid rgba(33, 33, 33, 0.2);
   font-size: 18px;
   line-height: 1.22;
-  letter-spacing: 0.02;
+  letter-spacing: 0.02em;
   &:last-child {
     border: none;
   }
