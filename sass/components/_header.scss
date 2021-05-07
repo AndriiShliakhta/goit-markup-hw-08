@@ -2,7 +2,6 @@
 
 .header {
   border-bottom: 1px solid #ececec;
-  @include centered(flex, center, inherit);
   position: relative;
 }
 
@@ -131,7 +130,6 @@
   }
 }
 .contacts-list__item {
-  // @include centered(flex, inherit, center);
   @media screen and (min-width: 1200px) {
     margin-left: 50px;
     &:first-child {
@@ -150,9 +148,6 @@
 
 .header__link {
   font-weight: 500;
-  // &:visited {
-  //   color: $section-title-color;
-  // }
   &:hover,
   &:focus {
     color: $accent-color;

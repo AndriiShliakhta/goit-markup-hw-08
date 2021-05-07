@@ -4,7 +4,6 @@
 }
 
 .benefits-list {
-  width: 100%;
   @media screen and (min-width: 768px) {
     @include centered(flex, space-between, stretch);
   }
@@ -29,7 +28,7 @@
   &::before {
     @include centered(block, inherit, inherit);
     content: '';
-    width: 450px;
+    max-width: 450px;
     @media screen and (min-width: 768px) {
       width: 354px;
     }

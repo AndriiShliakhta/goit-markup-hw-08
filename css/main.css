@@ -78,9 +78,14 @@ ul {
 }
 
 .container {
-  width: 480px;
   padding: 0 15px;
   margin: auto;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -98,15 +103,6 @@ ul {
 /* Хедер */
 .header {
   border-bottom: 1px solid #ececec;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: inherit;
-      -ms-flex-align: inherit;
-          align-items: inherit;
   position: relative;
 }
 
@@ -538,7 +534,6 @@ ul {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  width: 480px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -546,6 +541,12 @@ ul {
 @media screen and (min-width: 1200px) {
   .section-hero {
     padding: 200px 0;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .section-hero {
+    width: 480px;
   }
 }
 
@@ -602,10 +603,6 @@ ul {
   padding-bottom: 0;
 }
 
-.benefits-list {
-  width: 100%;
-}
-
 @media screen and (min-width: 768px) {
   .benefits-list {
     display: -webkit-box;
@@ -656,7 +653,7 @@ ul {
       -ms-flex-align: inherit;
           align-items: inherit;
   content: '';
-  width: 450px;
+  max-width: 450px;
   height: 120px;
   background-color: #f5f4fa;
   background-size: 70px;
@@ -987,7 +984,7 @@ ul {
   transition: fill var(--transition-function), border var(--transition-function);
 }
 
-@media screen and (min-width: 767px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .clients-list__icon {
     width: 226px;
   }
