@@ -22,10 +22,6 @@
   padding: 40px;
   @media screen and (min-width: 1200px) {
     width: 528px;
-    .modal-form__checkbox-label {
-      font-size: 14px;
-      line-height: 1.71;
-    }
   }
   position: relative;
 }
@@ -79,6 +75,10 @@
 
 .modal-form__checkbox-label {
   @include centered(flex, inherit, center);
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.71;
+  }
   font-size: 12px;
   line-height: 1.17;
   margin: 10px 0 14px;

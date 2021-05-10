@@ -1,19 +1,42 @@
 /* Постоянные клиенты */
 .clients-list {
   @include centered(flex, space-between, center);
-  flex-wrap: wrap;
-  @media screen and(min-width:1200px) {
-    flex-wrap: nowrap;
+  @media screen and(max-width: 1199px) {
+    flex-wrap: wrap;
   }
 }
+
 .clients-list__item {
-  margin-bottom: 30px;
-}
-.clients-list__item + .clients-list__item {
-  @media screen and(min-width:1200px) {
-    margin-left: 30px;
+  @media screen and(max-width:479px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+  @media screen and(max-width:767px) {
+    &:not(:nth-child(5)),
+    &:not(:nth-child(6)) {
+      margin-bottom: 30px;
+    }
+  }
+  @media screen and(max-width:1199px) {
+    &:not(:nth-child(4)),
+    &:not(:nth-child(5)),
+    &:not(:nth-child(6)) {
+      margin-bottom: 30px;
+    }
   }
 }
+
+// .clients-list__item {
+//   @media screen and(max-width: 1199px) {
+//     margin-bottom: 30px;
+//   }
+// }
+// .clients-list__item + .clients-list__item {
+//   @media screen and(min-width:1200px) {
+//     margin-left: 30px;
+//   }
+// }
 
 .clients-list__icon {
   width: 210px;
