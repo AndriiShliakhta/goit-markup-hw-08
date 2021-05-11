@@ -1130,7 +1130,7 @@ ul {
 }
 
 .subscribe-container__form {
-  width: 450px;
+  min-width: 320px;
   margin-bottom: 20px;
   display: block;
   padding: 15px 16px;
@@ -1139,6 +1139,12 @@ ul {
   border-radius: 4px;
   margin-top: 20px;
   font-size: 16px;
+}
+
+@media screen and (min-width: 480px) {
+  .subscribe-container__form {
+    width: 450px;
+  }
 }
 
 @media screen and (min-width: 1200px) {

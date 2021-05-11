@@ -61,7 +61,10 @@
   text-transform: uppercase;
 }
 .subscribe-container__form {
-  width: 450px;
+  min-width: 320px;
+  @media screen and(min-width: 480px) {
+    width: 450px;
+  }
   margin-bottom: 20px;
   display: block;
   @media screen and(min-width: 1200px) {
